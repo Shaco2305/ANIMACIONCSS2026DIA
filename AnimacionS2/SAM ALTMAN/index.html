@@ -1,0 +1,84 @@
+<html> 
+<head>
+    <title>ANIMACIONES CSS - ANIMATION</title>
+    <style>
+
+    h1{
+        font-family: "century gothic";
+        color: rgba(165, 42, 42, 0);
+        text-align: center;
+
+        animation: titulo 3s forwards;
+    }
+
+    @keyframes titulo{
+        from{ color: rgba(165, 42, 42, 0); }
+        to{ color: rgba(165, 42, 42, 1); }
+    }
+
+    p{
+    text-align: center;
+    font-family: "century gothic";
+    font-weight: bold;
+    opacity: 0;
+
+    width: 60%;      /* controla el ancho */
+    margin: 20px auto; /* centra y da espacio */
+    line-height: 1.5;  /* mejora la lectura */
+}
+
+    .p1{
+        animation: texto 3s 3s forwards;
+    }
+
+    .p2{
+        animation: texto 3s 9s forwards;
+    }
+
+    @keyframes texto{
+        from{ opacity: 0; }
+        to{ opacity: 1; }
+    }
+
+    img{
+        height: 200px;
+        width: 200px;
+        display: block;
+        margin: auto;
+        opacity: 0;
+    }
+
+    .img1{
+        animation: imagen 3s 6s forwards;
+    }
+
+    .img2{
+        animation: imagen 3s 12s forwards;
+    }
+
+    @keyframes imagen{
+        from{ opacity: 0; }
+        to{ opacity: 1; }
+    }
+
+    </style>
+</head>
+
+<body>
+    <br><br><a href="../../index.html">VOLVER</a><br><br>
+    <h1>SAM ALTMAN</h1>
+
+    <p class="p1">Sam Altman es un empresario y programador estadounidense reconocido en el campo de la tecnología. 
+        Fue presidente de Y Combinator, una de las aceleradoras de startups más importantes del mundo. 
+        Su trabajo ha estado enfocado en impulsar la innovación y el desarrollo de nuevas empresas tecnológicas.</p>
+
+    <img src="img/sam1.png" class="img1">
+
+    <p class="p2">Actualmente, se desempeña como CEO de OpenAI, donde lidera proyectos relacionados con la inteligencia artificial. 
+            Su objetivo principal es desarrollar tecnologías seguras y beneficiosas para la sociedad. 
+            Gracias a su liderazgo, la inteligencia artificial ha tenido un crecimiento significativo en los últimos años.</p>
+
+    <img src="img/sam2.webp" class="img2">
+
+</body>
+</html>
