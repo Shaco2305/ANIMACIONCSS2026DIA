@@ -1,118 +1,234 @@
 <html>
-    <head>
-        <title></title>
-        <style>
-            *{
-                margin: 0px;
-                padding: 0px;
-            }
-            .contenedor{
-                width: 800px;
-                height: 300px;
-                border: 1px solid black ;
-                margin: 0 auto;
-                position: relative;
-                overflow: hidden;
-            }
-            .cuadrito{  
-                width: 100px;
-                height: 100px;
+<head>
+<title>Animacion Abejas</title>
 
-                position: absolute;
-                top: 0px;
-                left: 0 px;
-                animation: cuadrito 4s infinite;
+<style>
 
-            }
-            .abeja{
-                width: 100%;
-                rotate: 45deg;
-               
-            }
+*{
+margin:0px;
+padding:0px;
+box-sizing:border-box;
+}
 
-            @keyframes cuadrito {
-            0%{
-                top: 100px;
-                left: 700px;
-                rotate: -45deg;
-            }
-            33%{
-                top: 0px;
-                left: 500px;
-                rotate: 0deg;
-            }
-            66%{
-                top: 200px;
-                left: 250px;
-                rotate: -45deg;
-            }
-            100%{
-                top: 0px;
-                left: -100px;
-                rotate: 0deg;
-            }
-        }
-            .pradera{
-                position: absolute;
-                bottom: 0px;
-                left: 0px;
-                width: 100%;
-                z-index: -2;
-            }
+body{
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url(img/fondo.jpg);
+background-size:cover;
+background-position:center;
+font-family:"Century Gothic";
+min-height:100vh;
+padding:40px;
+overflow:hidden;
+}
 
-            .cielo{
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                width: 100%;
-                height: 100%;
-                z-index: -1;
-            }
+#principal{
+width:1350px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+gap:50px;
+}
 
-            .cuadrito2{  
-                width: 100px;
-                height: 100px;
-                position: absolute;
-                top: 0px;
-                left: -100px;
-                animation: cuadrito 5s infinite 2s;
-            }
-             .abeja2{
-                position: absolute;
-                width: 80%;
-                left: 100px;
-                z-index: 0;
-               
-            }
+#contenido{
+flex:1;
+display:flex;
+justify-content:center;
+padding-top:40px;
+}
 
-            @keyframes cuadrito2 {
-                0%{
-                    top: 100px;
-                    left: -100px;
-                }
-                100%{
-                    top: 0px;
-                    left: 800px;
-                }
-            }   
-        </style>
-    </head>
-    <body>
-        <br><br><a href="../../index.html">VOLVER</a><br><br>
+.contenedor{
+width:850px;
+height:420px;
+border:5px solid white;
+border-radius:30px;
+margin:0 auto;
+position:relative;
+overflow:hidden;
+box-shadow:0 0 30px black;
+background:#87ceeb;
+}
 
-        <div class="contenedor">
-            
-            <div class="cuadrito"> 
-                <img class="abeja" src="/AnimacionS4/Animacion por pasos/img/abeja2.webp" alt="">
-            </div>
-                
-            <img class="cielo" src="/AnimacionS4/Animacion por pasos/img/cielo.png" alt="">
-            <img class="pradera" src="/AnimacionS4/Animacion por pasos/img/pradera.jpg" alt="">
-            
-         <div class="cuadrito2">
-                <img class="abeja2" src="/AnimacionS4/Animacion por pasos/img/abeja.webp" alt="">
-        </div>
-        </div>
-       
-    </body>
+.cuadrito{
+width:100px;
+height:100px;
+position:absolute;
+top:0px;
+left:0px;
+animation:cuadrito 4s infinite linear;
+z-index:3;
+}
+
+.abeja{
+width:100%;
+rotate:45deg;
+}
+
+@keyframes cuadrito{
+0%{
+top:120px;
+left:720px;
+rotate:-45deg;
+}
+33%{
+top:20px;
+left:520px;
+rotate:0deg;
+}
+66%{
+top:240px;
+left:260px;
+rotate:-45deg;
+}
+100%{
+top:40px;
+left:-120px;
+rotate:0deg;
+}
+}
+
+.pradera{
+position:absolute;
+bottom:0px;
+left:0px;
+width:100%;
+height:170px;
+z-index:1;
+}
+
+.cielo{
+position:absolute;
+top:0px;
+left:0px;
+width:100%;
+height:100%;
+z-index:0;
+}
+
+.cuadrito2{
+width:100px;
+height:100px;
+position:absolute;
+top:0px;
+left:-100px;
+animation:cuadrito2 5s infinite linear;
+z-index:2;
+}
+
+.abeja2{
+position:absolute;
+width:90px;
+left:0px;
+}
+
+@keyframes cuadrito2{
+0%{
+top:250px;
+left:-120px;
+}
+100%{
+top:40px;
+left:900px;
+}
+}
+
+#lado{
+width:300px;
+height:520px;
+background:rgba(30,30,30,.95);
+border-radius:35px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:40px;
+box-shadow:0 0 30px black;
+}
+
+#imagen{
+width:230px;
+height:230px;
+background:url(img/imagen6.jpg);
+background-size:cover;
+background-position:center;
+border-radius:25px;
+border:6px solid white;
+box-shadow:0 0 25px rgba(255,255,255,.6);
+animation:flotar 2s infinite alternate;
+}
+
+@keyframes flotar{
+from{
+transform:translateY(0px);
+}
+to{
+transform:translateY(-12px);
+}
+}
+
+.panel{
+padding:18px 45px;
+border-radius:22px;
+background:linear-gradient(135deg,#6a5cff,#8f7dff);
+display:flex;
+justify-content:center;
+align-items:center;
+box-shadow:0 0 20px rgba(106,92,255,.7);
+transition:.4s;
+}
+
+.panel:hover{
+transform:scale(1.08);
+}
+
+.panel a{
+text-decoration:none;
+color:white;
+font-size:24px;
+font-weight:bold;
+letter-spacing:1px;
+text-shadow:0 0 10px white;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="principal">
+
+<div id="contenido">
+
+<div class="contenedor">
+
+<img class="cielo" src="/AnimacionS4/Animacion por pasos/img/cielo.png">
+
+<img class="pradera" src="/AnimacionS4/Animacion por pasos/img/pradera.jpg">
+
+<div class="cuadrito">
+<img class="abeja" src="/AnimacionS4/Animacion por pasos/img/abeja2.webp">
+</div>
+
+<div class="cuadrito2">
+<img class="abeja2" src="/AnimacionS4/Animacion por pasos/img/abeja.webp">
+</div>
+
+</div>
+
+</div>
+
+<div id="lado">
+
+<div id="imagen"></div>
+
+<div class="panel">
+<a href="../../index.html">VOLVER</a>
+</div>
+
+</div>
+
+</div>
+
+</body>
 </html>
