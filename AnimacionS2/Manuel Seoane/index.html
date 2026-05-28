@@ -1,88 +1,203 @@
-<html> 
+<html>
 <head>
-    <title>ANIMACIONES CSS - ANIMATION</title>
-    <style>
+<title>ANIMACIONES CSS - ANIMATION</title>
 
-    h1{
-        font-family: "century gothic";
-        color: rgba(165, 42, 42, 0);
-        text-align: center;
+<style>
 
-        animation: titulo 3s forwards;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    @keyframes titulo{
-        from{ color: rgba(0, 102, 204, 0); }
-        to{ color: rgba(0, 102, 204, 1); }
-    }
+body{
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url(img/fondo2.jpg);
+background-size:cover;
+background-position:center;
+font-family:"century gothic";
+min-height:100vh;
+overflow-x:hidden;
+}
 
-    p{
-        text-align: center;
-        font-family: "century gothic";
-        font-weight: bold;
-        opacity: 0;
+.contenido{
+width:72%;
+padding:40px;
+}
 
-        width: 60%;
-        margin: 20px auto;
-        line-height: 1.5;
-    }
+h1{
+font-family:"century gothic";
+color:rgba(165,42,42,0);
+text-align:center;
+font-size:60px;
+margin-top:30px;
+margin-bottom:50px;
+animation:titulo 3s forwards;
+}
 
-    .p1{
-        animation: texto 3s 3s forwards;
-    }
+@keyframes titulo{
+from{
+color:rgba(0,102,204,0);
+}
+to{
+color:rgba(0,102,204,1);
+}
+}
 
-    .p2{
-        animation: texto 3s 9s forwards;
-    }
+p{
+text-align:center;
+font-family:"century gothic";
+font-weight:bold;
+opacity:0;
+color:white;
+width:80%;
+margin:35px auto;
+line-height:1.8;
+font-size:24px;
+}
 
-    @keyframes texto{
-        from{ opacity: 0; }
-        to{ opacity: 1; }
-    }
+.p1{
+animation:texto 3s 3s forwards;
+}
 
-    img{
-        height: 200px;
-        width: 200px;
-        display: block;
-        margin: auto;
-        opacity: 0;
-    }
+.p2{
+animation:texto 3s 9s forwards;
+}
 
-    .img1{
-        animation: imagen 3s 6s forwards;
-    }
+@keyframes texto{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0px);
+}
+}
 
-    .img2{
-        animation: imagen 3s 12s forwards;
-    }
+img{
+height:270px;
+width:270px;
+display:block;
+margin:auto;
+opacity:0;
+border-radius:25px;
+border:5px solid white;
+box-shadow:0 0 25px rgba(255,255,255,.5);
+}
 
-    @keyframes imagen{
-        from{ opacity: 0; }
-        to{ opacity: 1; }
-    }
+.img1{
+animation:imagen 3s 6s forwards;
+}
 
-    </style>
+.img2{
+animation:imagen 3s 12s forwards;
+}
+
+@keyframes imagen{
+from{
+opacity:0;
+transform:scale(.7);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+#panel{
+width:320px;
+height:700px;
+background:rgba(30,30,30,.92);
+border-radius:35px;
+position:fixed;
+right:35px;
+top:35px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:40px;
+box-shadow:0 0 35px black;
+}
+
+#snopy{
+width:210px;
+height:210px;
+background:url(img/Snopy1.jpg);
+background-size:cover;
+background-position:center;
+border-radius:28px;
+border:5px solid white;
+box-shadow:0 0 25px white;
+animation:flotar 2s infinite alternate;
+}
+
+@keyframes flotar{
+from{
+transform:translateY(0px);
+}
+to{
+transform:translateY(-12px);
+}
+}
+
+.boton{
+padding:18px 45px;
+border-radius:22px;
+background:linear-gradient(135deg,#5c5cff,#8f6dff);
+box-shadow:0 0 25px rgba(120,100,255,.8);
+transition:.4s;
+}
+
+.boton:hover{
+transform:scale(1.08);
+}
+
+.boton a{
+text-decoration:none;
+color:white;
+font-size:30px;
+font-weight:bold;
+}
+
+</style>
 </head>
 
 <body>
-    <br><br><a href="../../index.html">VOLVER</a><br><br>
-    <h1>MANUEL SEOANE CORRALES</h1>
 
-    <p class="p1">
-    El Instituto de Educación Superior Tecnológico Público Manuel Seoane Corrales 
-    es una institución reconocida por su formación técnica profesional de calidad. 
-    Brinda diversas carreras orientadas al desarrollo tecnológico y la inserción laboral de sus estudiantes.
-    </p>
+<div class="contenido">
 
-    <img src="img/seoane1.jpg" class="img1">
+<h1>MANUEL SEOANE CORRALES</h1>
 
-    <p class="p2">
-    Además, el instituto promueve valores como la responsabilidad y la innovación en sus estudiantes. 
-    Cuenta con docentes capacitados y ambientes adecuados para el aprendizaje práctico. 
-    Su objetivo es formar profesionales competentes para el mercado laboral.
-    </p>
+<p class="p1">
+El Instituto de Educación Superior Tecnológico Público Manuel Seoane Corrales 
+es una institución reconocida por su formación técnica profesional de calidad. 
+Brinda diversas carreras orientadas al desarrollo tecnológico y la inserción laboral de sus estudiantes.
+</p>
 
-    <img src="img/seoane2.png" class="img2">
+<img src="img/seoane1.jpg" class="img1">
+
+<p class="p2">
+Además, el instituto promueve valores como la responsabilidad y la innovación en sus estudiantes. 
+Cuenta con docentes capacitados y ambientes adecuados para el aprendizaje práctico. 
+Su objetivo es formar profesionales competentes para el mercado laboral.
+</p>
+
+<img src="img/seoane2.png" class="img2">
+
+</div>
+
+<div id="panel">
+
+<div id="snopy"></div>
+
+<div class="boton">
+<a href="../../index.html">VOLVER</a>
+</div>
+
+</div>
 
 </body>
 </html>
