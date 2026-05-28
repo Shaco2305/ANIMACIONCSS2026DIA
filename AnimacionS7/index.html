@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PARALLAX</title>
+<title>ANIMACION PAYASO</title>
 
 <style>
 
@@ -14,95 +14,33 @@ box-sizing:border-box;
 }
 
 body{
-overflow:hidden;
-background:#111;
+height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
+gap:18px;
+overflow:hidden;
+background:#111;
+font-family:Arial;
 }
 
 .contenedor{
-width:1350px;
-height:760px;
+width:1200px;
+height:700px;
 position:relative;
 overflow:hidden;
-border:8px solid white;
-border-radius:30px;
+border-radius:25px;
+border:6px solid white;
 box-shadow:0 0 40px black;
-background:black;
-}
-
-.fondo{
-width:110%;
-height:110%;
-position:absolute;
-top:-5%;
-left:-5%;
-background:url(img/fondo.jpg) center center no-repeat;
+background:url(img/parque.jpg) no-repeat center bottom;
 background-size:cover;
-animation:zoomFondo 30s linear forwards;
-filter:brightness(.9);
-z-index:1;
-}
-
-@keyframes zoomFondo{
-from{
-transform:scale(1);
-}
-to{
-transform:scale(1.08);
-}
-}
-
-.cesped{
-width:130%;
-height:340px;
-position:absolute;
-left:-15%;
-bottom:-30px;
-background:url(img/cesped3.jpg) center bottom no-repeat;
-background-size:100% 100%;
-animation:zoomCesped 12s linear forwards;
-z-index:2;
-opacity:.95;
-}
-
-@keyframes zoomCesped{
-from{
-transform:scale(1);
-}
-to{
-transform:scale(1.28);
-}
-}
-
-.arboles{
-width:120%;
-height:100%;
-position:absolute;
-left:-10%;
-bottom:0;
-background:url(img/arboles1.png) center bottom no-repeat;
-background-size:80%;
-animation:zoomArboles 18s linear forwards;
-z-index:4;
-}
-
-@keyframes zoomArboles{
-from{
-transform:scale(1);
-}
-to{
-transform:scale(1.16);
-}
 }
 
 .personaje{
 width:350px;
 height:450px;
 position:absolute;
-bottom:85px;
+bottom:130px;
 left:-400px;
 animation:caminar 12s linear forwards;
 z-index:6;
@@ -115,17 +53,17 @@ transform-origin:bottom left;
 left:-400px;
 }
 70%{
-left:20%;
+left:18%;
 }
 100%{
-left:20%;
+left:18%;
 }
 }
 
 .gorro{
 width:200px;
 height:150px;
-background-image:url(img/chinese.webp);
+background:url(img/chinese.webp);
 background-size:100% 100%;
 clip-path:polygon(50% 0%,0% 100%,100% 100%);
 position:absolute;
@@ -137,7 +75,7 @@ z-index:2;
 .cara{
 width:200px;
 height:200px;
-background-image:url(img/Trollface.webp);
+background:url(img/Trollface.webp);
 background-size:cover;
 background-repeat:no-repeat;
 clip-path:circle(50% at 50% 50%);
@@ -149,7 +87,7 @@ left:150px;
 .cuerpo{
 width:200px;
 height:200px;
-background-image:url(img/jean.webp);
+background:url(img/jean.webp);
 background-size:cover;
 clip-path:polygon(42% 0,68% 0,80% 100%,26% 100%);
 position:absolute;
@@ -161,7 +99,7 @@ z-index:2;
 .manos{
 width:300px;
 height:200px;
-background-image:url(img/polos.avif);
+background:url(img/polos.avif);
 background-size:cover;
 clip-path:polygon(19% 48%,84% 47%,100% 61%,84% 70%,17% 71%,0 59%);
 position:absolute;
@@ -183,7 +121,7 @@ transform:rotate(-4deg);
 .zapaiz{
 width:200px;
 height:200px;
-background-image:url(img/zapatos.webp);
+background:url(img/zapatos.webp);
 background-size:cover;
 clip-path:ellipse(23% 12% at 23% 88%);
 position:absolute;
@@ -196,7 +134,7 @@ animation:pataIzq .35s infinite alternate;
 .zapade{
 width:200px;
 height:200px;
-background-image:url(img/zapatos.webp);
+background:url(img/zapatos.webp);
 background-size:cover;
 clip-path:ellipse(25% 15% at 75% 85%);
 position:absolute;
@@ -227,7 +165,7 @@ transform:translateY(0px);
 .cono{
 width:150px;
 height:150px;
-background-image:url(img/cono.webp);
+background:url(img/cono.webp);
 background-size:100% 100%;
 clip-path:polygon(49% 51%,32% 0,71% 0);
 position:absolute;
@@ -239,7 +177,7 @@ z-index:3;
 .bola{
 width:150px;
 height:150px;
-background-image:url(img/fresa.jpg);
+background:url(img/fresa.jpg);
 background-size:cover;
 clip-path:circle(16.4% at 50% 50%);
 position:absolute;
@@ -253,7 +191,7 @@ animation-delay:10s;
 .bola2{
 width:150px;
 height:150px;
-background-image:url(img/vainilla.jpg);
+background:url(img/vainilla.jpg);
 background-size:cover;
 clip-path:circle(16.4% at 50% 50%);
 position:absolute;
@@ -267,7 +205,7 @@ animation-delay:10s;
 .bola3{
 width:150px;
 height:150px;
-background-image:url(img/chocolate.jpg);
+background:url(img/chocolate.jpg);
 background-size:cover;
 clip-path:circle(16.4% at 50% 50%);
 position:absolute;
@@ -299,11 +237,11 @@ transform:translateY(320px);
 .shaco{
 width:190px;
 height:240px;
-background:url(img/shaco.png);
+background:url(img/shaco3.png);
 background-size:100% 100%;
 position:absolute;
-right:320px;
-bottom:120px;
+right:250px;
+bottom:170px;
 opacity:0;
 animation:aparecerShaco .8s forwards;
 animation-delay:9s;
@@ -321,16 +259,36 @@ opacity:1;
 }
 }
 
+.panel{
+padding:18px 28px;
+border-radius:20px;
+background:linear-gradient(135deg,#6a5cff,#8f7dff);
+display:flex;
+justify-content:center;
+align-items:center;
+box-shadow:0 0 20px rgba(106,92,255,.7);
+}
+
+.panel a{
+text-decoration:none;
+color:white;
+font-size:22px;
+font-weight:bold;
+transition:.4s;
+}
+
+.panel a:hover{
+transform:scale(1.08);
+color:#ffffff;
+text-shadow:0 0 10px white;
+}
+
 </style>
 </head>
 
 <body>
-<br><br><a href="/ANIMACIONCSS2026DIA/index.html">VOLVER</a><br><br>
-<div class="contenedor">
 
-<div class="fondo"></div>
-<div class="cesped"></div>
-<div class="arboles"></div>
+<div class="contenedor">
 
 <div class="personaje">
 <div class="gorro"></div>
@@ -347,6 +305,10 @@ opacity:1;
 
 <div class="shaco"></div>
 
+</div>
+
+<div class="panel">
+<a href="../index.html">VOLVER</a>
 </div>
 
 </body>
