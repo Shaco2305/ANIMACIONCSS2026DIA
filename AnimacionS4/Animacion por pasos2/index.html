@@ -1,140 +1,240 @@
 <html>
 <head>
-    <title>VISITA PERU</title>
-    <style>
-        *{
-            margin: 0px;
-            padding: 0px;
-        }
-        .contenedor{
-            width: 800px;
-            height: 300px;
-            position: relative;
-            margin: 0 auto;
-            border: 1px solid black;
-            overflow: hidden;
-        }
-        .marco1{
-            width:  200px;
-            height: 300px;
-            background-color: red;
-            position: absolute;
-            top: 0px;
-            left: 0px;
+<title>VISITA PERU</title>
 
-            animation: marco1 2s 1 forwards;
-            background-image: url(img/mar.jpg);
-            background-size: cover;
-        }
-        @keyframes marco1{
-            0%{
-                top: -300px;
-                left: 0px;
-                transform: rotateY(180deg);
-            }
-            50%{
-                top: 300px;
-                left: 0px;
-            }
-            100%{
-                top: 0px;
-                left: 0px;
-            }
-        }
-        .marco2{
-            width:  200px;
-            height: 300px;
-            background-color: green;
-            position: absolute;
-            top: -300px;
-            left: 200px;
+<style>
 
-            animation: marco2 2s 1 forwards 2s;
-            background-image: url(img/costa.jpg );
-            background-size: cover;
+*{
+margin:0px;
+padding:0px;
+box-sizing:border-box;
+}
 
-        }
-        @keyframes marco2{
-            0%{
-                top: -100px;
-                left: 200px;
-                transform: rotateY(180deg);
-            }
-            50%{
-                top: 100px;
-                left: 200px;
-            }
-            100%{
-                top: 0px;
-                left: 200px;
-            }
-        }
-        .marco3{
-            width:  200px;
-            height: 300px;
-            background-color: yellow;
-            position: absolute;
-            top: 0px;
-            left: 400px;
-        
-            animation: marco3 2s 1 forwards 4s;
-            background-image: url(img/sierra.jpg);
-            background-size: cover;
-        }
-        @keyframes marco3{
-            0%{
-                top: -100px;
-                left: 400px;
-                transform: rotateY(180deg);
-            }
-            50%{
-                top: 100px;
-                left: 400px;
-            }
-            100%{
-                top: 0px;
-                left: 400px;
-            }
-        }
-        .marco4{
-            width:  200px;
-            height: 300px;
-            background-color: blue;
-            position: absolute;
-            top: 0px;
-            left: 600px;
-            
-            animation: marco4 2s 1 forwards 6s;
-            background-image: url(img/selva.jpg);
-            background-size: cover;
-        }
-        @keyframes marco4{
-        0%{
-            top: -100px;
-            left: 600px;
-            transform: rotateY(180deg);
-        }
-        50%{
-            top: 100px;
-            left: 600px;
-        }
-        100%{
-            top: 0px;
-            left: 600px;
-        }
-    }
-    </style>
+body{
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url(img/fondo.jpg);
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+font-family:"Century Gothic";
+min-height:100vh;
+padding:40px;
+overflow-x:hidden;
+}
 
+#principal{
+width:1250px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+gap:40px;
+}
+
+#lado{
+width:300px;
+height:650px;
+background:rgba(25,25,25,.92);
+border-radius:35px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:35px;
+box-shadow:0 0 30px black;
+position:sticky;
+top:20px;
+}
+
+#imagen{
+width:240px;
+height:240px;
+background:url(img/imagen7.jpg);
+background-size:cover;
+background-position:center;
+border-radius:30px;
+border:6px solid white;
+box-shadow:0 0 25px rgba(255,255,255,.6);
+
+animation:flotar 2s infinite alternate;
+}
+
+@keyframes flotar{
+from{
+transform:translateY(0px);
+}
+to{
+transform:translateY(-12px);
+}
+}
+
+.panel{
+padding:18px 45px;
+border-radius:22px;
+background:linear-gradient(135deg,#6a5cff,#8f7dff);
+display:flex;
+justify-content:center;
+align-items:center;
+box-shadow:0 0 20px rgba(106,92,255,.7);
+transition:.4s;
+}
+
+.panel:hover{
+transform:scale(1.08);
+}
+
+.panel a{
+text-decoration:none;
+color:white;
+font-size:25px;
+font-weight:bold;
+letter-spacing:1px;
+text-shadow:0 0 10px white;
+}
+
+.contenedor{
+width:800px;
+height:300px;
+position:relative;
+border-radius:25px;
+overflow:hidden;
+border:5px solid white;
+box-shadow:0 0 30px black;
+background:black;
+}
+
+.marco1{
+width:200px;
+height:300px;
+position:absolute;
+top:0px;
+left:0px;
+background-image:url(img/mar.jpg);
+background-size:cover;
+background-position:center;
+
+animation:marco1 2s forwards;
+}
+
+@keyframes marco1{
+0%{
+top:-300px;
+transform:rotateY(180deg);
+}
+50%{
+top:300px;
+}
+100%{
+top:0px;
+}
+}
+
+.marco2{
+width:200px;
+height:300px;
+position:absolute;
+top:-300px;
+left:200px;
+background-image:url(img/costa.jpg);
+background-size:cover;
+background-position:center;
+
+animation:marco2 2s forwards 2s;
+}
+
+@keyframes marco2{
+0%{
+top:-150px;
+transform:rotateY(180deg);
+}
+50%{
+top:120px;
+}
+100%{
+top:0px;
+}
+}
+
+.marco3{
+width:200px;
+height:300px;
+position:absolute;
+top:0px;
+left:400px;
+background-image:url(img/sierra.jpg);
+background-size:cover;
+background-position:center;
+
+animation:marco3 2s forwards 4s;
+}
+
+@keyframes marco3{
+0%{
+top:-150px;
+transform:rotateY(180deg);
+}
+50%{
+top:120px;
+}
+100%{
+top:0px;
+}
+}
+
+.marco4{
+width:200px;
+height:300px;
+position:absolute;
+top:0px;
+left:600px;
+background-image:url(img/selva.jpg);
+background-size:cover;
+background-position:center;
+
+animation:marco4 2s forwards 6s;
+}
+
+@keyframes marco4{
+0%{
+top:-150px;
+transform:rotateY(180deg);
+}
+50%{
+top:120px;
+}
+100%{
+top:0px;
+}
+}
+
+</style>
 </head>
-    <body>
-        <br><br><a href="../../index.html">VOLVER</a><br><br>
 
-        <div class="contenedor">
-            <div class="marco1"></div>
-            <div class="marco2"></div>
-            <div class="marco3"></div>
-            <div class="marco4"></div>
+<body>
 
-        </div>
-    </body>
+<div id="principal">
+
+<div class="contenedor">
+
+<div class="marco1"></div>
+<div class="marco2"></div>
+<div class="marco3"></div>
+<div class="marco4"></div>
+
+</div>
+
+<div id="lado">
+
+<div id="imagen"></div>
+
+<div class="panel">
+<a href="../../index.html">VOLVER</a>
+</div>
+
+</div>
+
+</div>
+
+</body>
 </html>
