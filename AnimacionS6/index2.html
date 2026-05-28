@@ -3,17 +3,99 @@
 <head>
 <meta charset="UTF-8">
 <title>COCO + VAINILLA</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap" rel="stylesheet">
+
 <style>
 
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 body{
-background:#111;
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url(img/fondo.jpg);
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
+min-height:100vh;
+font-family:Arial;
+padding:30px;
+}
+
+#principal{
+width:900px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:40px;
+}
+
+#lado{
+width:260px;
+height:640px;
+background:#1f1f1f;
+border-radius:35px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:35px;
+box-shadow:0 0 30px black;
+}
+
+#imagen{
+width:210px;
+height:210px;
+background:url(img/imagen9.jpg);
+background-size:cover;
+background-position:center;
+border-radius:30px;
+border:6px solid white;
+box-shadow:0 0 25px white;
+
+animation:flotar 2s infinite alternate;
+}
+
+@keyframes flotar{
+from{
+transform:translateY(0px);
+}
+to{
+transform:translateY(-12px);
+}
+}
+
+.panel{
+padding:18px 45px;
+border-radius:22px;
+background:linear-gradient(135deg,#ff7b00,#ffb347);
+display:flex;
+justify-content:center;
+align-items:center;
+box-shadow:0 0 20px #ff7b00;
+transition:.4s;
+}
+
+.panel:hover{
+transform:scale(1.08);
+}
+
+.panel a{
+text-decoration:none;
+color:white;
+font-size:24px;
+font-weight:bold;
+letter-spacing:1px;
+text-shadow:0 0 10px white;
 }
 
 .contenedor{
@@ -22,7 +104,9 @@ height:640px;
 background:#F4D027;
 position:relative;
 overflow:hidden;
-border-radius:20px;
+border-radius:25px;
+box-shadow:0 0 35px black;
+flex-shrink:0;
 }
 
 .palmeras{
@@ -293,23 +377,51 @@ animation:flor 8s infinite;
 </head>
 
 <body>
-    <br><br><a href="/ANIMACIONCSS2026DIA/index.html">VOLVER</a><br><br>
+
+<div id="principal">
 
 <div class="contenedor">
+
 <div class="palmeras"></div>
+
 <div class="text1">YA PROBASTE</div>
+
 <div class="text2">EL NUEVO</div>
+
 <div class="text3">SABOR</div>
+
 <div class="coco1"></div>
+
 <div class="cocoTop"></div>
+
 <div class="coco2"></div>
+
 <div class="coco3"></div>
+
 <div class="coco4"></div>
+
 <div class="t1">COCO</div>
+
 <div class="t2">+</div>
+
 <div class="t3">VAINILLA</div>
+
 <div class="coco5"></div>
+
 <div class="flor"></div>
+
+</div>
+
+<div id="lado">
+
+<div id="imagen"></div>
+
+<div class="panel">
+<a href="../../index.html">VOLVER</a>
+</div>
+
+</div>
+
 </div>
 
 </body>
