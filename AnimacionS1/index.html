@@ -1,0 +1,191 @@
+<html>
+<head>
+<title>AnimacionS1</title>
+
+<style type="text/css">
+
+*{
+margin:0px;
+padding:0px;
+box-sizing:border-box;
+}
+
+body{
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url(img/fondo.jpg);
+background-size:cover;
+background-position:center;
+font-family:Arial;
+min-height:100vh;
+padding:30px;
+overflow:auto;
+}
+
+#principal{
+width:1500px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+gap:40px;
+}
+
+#tablero{
+width:1000px;
+}
+
+#contenedor1,
+#contenedor2{
+width:1000px;
+height:100px;
+font-size:0;
+}
+
+#contenedor1{
+background-color:saddlebrown;
+}
+
+#contenedor2{
+background-color:darkolivegreen;
+}
+
+#cuadrito1{
+background:black;
+}
+
+#cuadrito2{
+background:grey;
+}
+
+#cuadrito1,
+#cuadrito2{
+width:100px;
+height:100px;
+display:inline-block;
+transition:.3s;
+}
+
+#cuadrito1:hover,
+#cuadrito2:hover{
+transform:scale(1.05);
+}
+
+#lado{
+width:340px;
+height:760px;
+background:#242424;
+border-radius:35px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:40px;
+box-shadow:0 0 30px black;
+position:sticky;
+top:20px;
+}
+
+#imagen{
+width:290px;
+height:290px;
+background:url(img/Snopy.jpg);
+background-size:cover;
+background-position:center;
+border-radius:30px;
+border:6px solid white;
+box-shadow:0 0 30px rgba(255,255,255,.6);
+animation:flotar 2s infinite alternate;
+}
+
+@keyframes flotar{
+from{
+transform:translateY(0px);
+}
+to{
+transform:translateY(-12px);
+}
+}
+
+.panel{
+padding:18px 45px;
+border-radius:22px;
+background:linear-gradient(135deg,#6a5cff,#8f7dff);
+display:flex;
+justify-content:center;
+align-items:center;
+box-shadow:0 0 20px rgba(106,92,255,.7);
+transition:.4s;
+}
+
+.panel:hover{
+transform:scale(1.08);
+}
+
+.panel a{
+text-decoration:none;
+color:white;
+font-size:25px;
+font-weight:bold;
+font-family:"Century Gothic";
+letter-spacing:1px;
+text-shadow:0 0 10px white;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="principal">
+
+<div id="tablero">
+
+<div id="contenedor1">
+<div id="cuadrito1"></div><div id="cuadrito2"></div><div id="cuadrito1"></div><div id="cuadrito2"></div><div id="cuadrito1"></div><div id="cuadrito2"></div><div id="cuadrito1"></div><div id="cuadrito2"></div>
+</div>
+
+<div id="contenedor2">
+<div id="cuadrito2"></div><div id="cuadrito1"></div><div id="cuadrito2"></div><div id="cuadrito1"></div><div id="cuadrito2"></div><div id="cuadrito1"></div><div id="cuadrito2"></div><div id="cuadrito1"></div>
+</div>
+
+<div id="contenedor1">
+<div id="cuadrito1"></div><div id="cuadrito2"></div><div id="cuadrito1"></div><div id="cuadrito2"></div><div id="cuadrito1"></div><div id="cuadrito2"></div><div id="cuadrito1"></div><div id="cuadrito2"></div>
+</div>
+
+<div id="contenedor2">
+<div id="cuadrito2"></div><div id="cuadrito1"></div><div id="cuadrito2"></div><div id="cuadrito1"></div><div id="cuadrito2"></div><div id="cuadrito1"></div><div id="cuadrito2"></div><div id="cuadrito1"></div>
+</div>
+
+<div id="contenedor1">
+<div id="cuadrito1"></div><div id="cuadrito2"></div><div id="cuadrito1"></div><div id="cuadrito2"></div><div id="cuadrito1"></div><div id="cuadrito2"></div><div id="cuadrito1"></div><div id="cuadrito2"></div>
+</div>
+
+<div id="contenedor2">
+<div id="cuadrito2"></div><div id="cuadrito1"></div><div id="cuadrito2"></div><div id="cuadrito1"></div><div id="cuadrito2"></div><div id="cuadrito1"></div><div id="cuadrito2"></div><div id="cuadrito1"></div>
+</div>
+
+<div id="contenedor1">
+<div id="cuadrito1"></div><div id="cuadrito2"></div><div id="cuadrito1"></div><div id="cuadrito2"></div><div id="cuadrito1"></div><div id="cuadrito2"></div><div id="cuadrito1"></div><div id="cuadrito2"></div>
+</div>
+
+<div id="contenedor2">
+<div id="cuadrito2"></div><div id="cuadrito1"></div><div id="cuadrito2"></div><div id="cuadrito1"></div><div id="cuadrito2"></div><div id="cuadrito1"></div><div id="cuadrito2"></div><div id="cuadrito1"></div>
+</div>
+
+</div>
+
+<div id="lado">
+
+<div id="imagen"></div>
+
+<div class="panel">
+<a href="../index.html">VOLVER</a>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
