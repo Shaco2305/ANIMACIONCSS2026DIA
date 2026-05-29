@@ -1,0 +1,196 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:25px;
+background:#050505;
+overflow:hidden;
+font-family:Arial;
+padding:20px;
+}
+
+#lado{
+width:280px;
+height:650px;
+background:rgba(25,25,25,.95);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:40px;
+box-shadow:0 0 30px black;
+}
+
+#imagen{
+width:220px;
+height:220px;
+background:url(../img/imagen17.jpg);
+background-size:cover;
+background-position:center;
+border:6px solid white;
+box-shadow:0 0 25px rgba(255,255,255,.6);
+animation:flotarPanel 2s infinite alternate;
+}
+
+@keyframes flotarPanel{
+from{
+transform:translateY(0px);
+}
+to{
+transform:translateY(-12px);
+}
+}
+
+.contenedor{
+width:1180px;
+height:650px;
+position:relative;
+overflow:hidden;
+border:8px solid white;
+box-shadow:0 0 45px black;
+background:black;
+}
+
+.fondo{
+width:110%;
+height:110%;
+position:absolute;
+top:-5%;
+left:-5%;
+background:url(../img/fondo.jpg) center center no-repeat;
+background-size:cover;
+animation:fondoZoom 18s linear forwards;
+z-index:1;
+}
+
+@keyframes fondoZoom{
+from{
+transform:scale(1);
+}
+to{
+transform:scale(1.05);
+}
+}
+
+.cesped{
+width:120%;
+height:240px;
+position:absolute;
+left:-10%;
+bottom:-20px;
+background:url(../img/cesped3.jpg) center bottom no-repeat;
+background-size:100% 100%;
+animation:cespedZoom 10s linear forwards;
+z-index:2;
+}
+
+@keyframes cespedZoom{
+from{
+transform:scale(1);
+}
+to{
+transform:scale(1.18);
+}
+}
+
+.arboles{
+width:115%;
+height:100%;
+position:absolute;
+top:0;
+left:-7%;
+background:url(../img/arboles1.png) center bottom no-repeat;
+background-size:100%;
+animation:arbolZoom 14s linear forwards;
+z-index:4;
+}
+
+@keyframes arbolZoom{
+from{
+transform:scale(1);
+}
+to{
+transform:scale(1.10);
+}
+}
+
+.champi{
+width:260px;
+height:260px;
+position:absolute;
+top:380px;
+left:-260px;
+background:url(../img/champi2.png) no-repeat;
+background-size:100% 100%;
+animation:caminar 10s linear forwards;
+z-index:5;
+filter:drop-shadow(0 0 12px white);
+}
+
+@keyframes caminar{
+0%{
+left:-260px;
+transform:scale(.55);
+}
+70%{
+left:470px;
+transform:scale(.9);
+}
+100%{
+left:470px;
+transform:scale(1);
+}
+}
+
+.shaco{
+width:180px;
+height:240px;
+position:absolute;
+top:360px;
+left:820px;
+background:url(../img/shaco.png);
+background-size:100% 100%;
+z-index:6;
+animation:flotar 1.8s infinite alternate ease-in-out;
+filter:
+drop-shadow(0 0 10px red)
+drop-shadow(0 0 25px rgba(255,0,0,.8));
+}
+
+@keyframes flotar{
+from{
+transform:translateY(0px);
+}
+to{
+transform:translateY(-12px);
+}
+}
+
+.panel{
+padding:18px 28px;
+background:linear-gradient(135deg,#6a5cff,#8f7dff);
+display:flex;
+justify-content:center;
+align-items:center;
+box-shadow:0 0 20px rgba(106,92,255,.7);
+transition:.4s;
+}
+
+.panel:hover{
+transform:scale(1.08);
+}
+
+.panel a{
+text-decoration:none;
+color:white;
+font-size:22px;
+font-weight:bold;
+text-shadow:0 0 10px white;
+}
