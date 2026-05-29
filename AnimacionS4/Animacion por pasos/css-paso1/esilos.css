@@ -1,0 +1,182 @@
+*{
+margin:0px;
+padding:0px;
+box-sizing:border-box;
+}
+
+body{
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url(../img/fondo.jpg);
+background-size:cover;
+background-position:center;
+font-family:"Century Gothic";
+min-height:100vh;
+padding:40px;
+overflow:hidden;
+}
+
+#principal{
+width:1350px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+gap:50px;
+}
+
+#contenido{
+flex:1;
+display:flex;
+justify-content:center;
+padding-top:40px;
+}
+
+.contenedor{
+width:850px;
+height:420px;
+border:5px solid white;
+margin:0 auto;
+position:relative;
+overflow:hidden;
+box-shadow:0 0 30px black;
+background:#87ceeb;
+}
+
+.cuadrito{
+width:100px;
+height:100px;
+position:absolute;
+top:0px;
+left:0px;
+animation:cuadrito 4s infinite linear;
+z-index:3;
+}
+
+.abeja{
+width:100%;
+rotate:45deg;
+}
+
+@keyframes cuadrito{
+0%{
+top:120px;
+left:720px;
+rotate:-45deg;
+}
+33%{
+top:20px;
+left:520px;
+rotate:0deg;
+}
+66%{
+top:240px;
+left:260px;
+rotate:-45deg;
+}
+100%{
+top:40px;
+left:-120px;
+rotate:0deg;
+}
+}
+
+.pradera{
+position:absolute;
+bottom:0px;
+left:0px;
+width:100%;
+height:170px;
+z-index:1;
+}
+
+.cielo{
+position:absolute;
+top:0px;
+left:0px;
+width:100%;
+height:100%;
+z-index:0;
+}
+
+.cuadrito2{
+width:100px;
+height:100px;
+position:absolute;
+top:0px;
+left:-100px;
+animation:cuadrito2 5s infinite linear;
+z-index:2;
+}
+
+.abeja2{
+position:absolute;
+width:90px;
+left:0px;
+}
+
+@keyframes cuadrito2{
+0%{
+top:250px;
+left:-120px;
+}
+100%{
+top:40px;
+left:900px;
+}
+}
+
+#lado{
+width:300px;
+height:520px;
+background:rgba(30,30,30,.95);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:40px;
+box-shadow:0 0 30px black;
+}
+
+#imagen{
+width:230px;
+height:230px;
+background:url(../img/imagen6.jpg);
+background-size:cover;
+background-position:center;
+border:6px solid white;
+box-shadow:0 0 25px rgba(255,255,255,.6);
+animation:flotar 2s infinite alternate;
+}
+
+@keyframes flotar{
+from{
+transform:translateY(0px);
+}
+to{
+transform:translateY(-12px);
+}
+}
+
+.panel{
+padding:18px 45px;
+background:linear-gradient(135deg,#6a5cff,#8f7dff);
+display:flex;
+justify-content:center;
+align-items:center;
+box-shadow:0 0 20px rgba(106,92,255,.7);
+transition:.4s;
+}
+
+.panel:hover{
+transform:scale(1.08);
+}
+
+.panel a{
+text-decoration:none;
+color:white;
+font-size:24px;
+font-weight:bold;
+letter-spacing:1px;
+text-shadow:0 0 10px white;
+}
