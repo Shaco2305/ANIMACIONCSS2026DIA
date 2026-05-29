@@ -1,0 +1,152 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url(img/fondo2.jpg);
+background-size:cover;
+background-position:center;
+font-family:"century gothic";
+min-height:100vh;
+overflow-x:hidden;
+}
+
+.contenido{
+width:70%;
+padding:40px;
+}
+
+h1{
+font-family:"century gothic";
+color:rgba(165,42,42,0);
+text-align:center;
+font-size:60px;
+margin-top:30px;
+margin-bottom:50px;
+animation:titulo 3s forwards;
+}
+
+@keyframes titulo{
+from{
+color:rgba(0,102,204,0);
+}
+
+to{
+color:rgba(0,102,204,1);
+}
+}
+
+p{
+text-align:center;
+font-family:"century gothic";
+font-weight:bold;
+opacity:0;
+color:white;
+width:80%;
+margin:35px auto;
+line-height:1.8;
+font-size:24px;
+}
+
+.p1{
+animation:texto 3s 3s forwards;
+}
+
+.p2{
+animation:texto 3s 9s forwards;
+}
+
+@keyframes texto{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0px);
+}
+}
+
+img{
+height:270px;
+width:270px;
+display:block;
+margin:auto;
+opacity:0;
+border:5px solid white;
+box-shadow:0 0 25px rgba(255,255,255,.5);
+}
+
+.img1{
+animation:imagen 3s 6s forwards;
+}
+
+.img2{
+animation:imagen 3s 12s forwards;
+}
+
+@keyframes imagen{
+from{
+opacity:0;
+transform:scale(.7);
+}
+
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+#panel{
+width:300px;
+height:650px;
+background:rgba(30,30,30,.92);
+position:fixed;
+right:35px;
+top:35px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:40px;
+box-shadow:0 0 35px black;
+}
+
+#snopy{
+width:210px;
+height:210px;
+background:url(../img/Snopy1.jpg);
+background-size:cover;
+background-position:center;
+border:5px solid white;
+box-shadow:0 0 25px white;
+animation:flotar 2s infinite alternate;
+}
+
+@keyframes flotar{
+from{
+transform:translateY(0px);
+}
+
+to{
+transform:translateY(-12px);
+}
+}
+
+.boton{
+padding:18px 45px;
+background:#5c5cff;
+box-shadow:0 0 25px #5c5cff;
+}
+
+.boton a{
+text-decoration:none;
+color:white;
+font-size:30px;
+font-weight:bold;
+}
