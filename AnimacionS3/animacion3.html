@@ -40,38 +40,35 @@ padding-top:60px;
 }
 
 .contenedor{
-width:500px;
+width:450px;
 height:420px;
 border:4px solid white;
-background:black;
 position:relative;
 overflow:hidden;
+background:white;
 box-shadow:0 0 25px black;
 }
 
 .cuadrito{
 width:100px;
 height:100px;
-background:transparent;
+background:red;
 position:absolute;
-left:150px;
-top:140px;
+top:-100px;
+left:-100px;
 animation:cuadrito 3s infinite linear;
 }
 
 @keyframes cuadrito{
 from{
-left:-120px;
+top:420px;
+left:-100px;
 }
 
 to{
-left:520px;
+top:-100px;
+left:500px;
 }
-}
-
-.cuadrito img{
-width:120px;
-height:120px;
 }
 
 #lado{
@@ -89,7 +86,7 @@ box-shadow:0 0 30px black;
 #imagen{
 width:230px;
 height:230px;
-background:url(img/imagen4.jpg);
+background:url(img/imagen3.jpg);
 background-size:cover;
 background-position:center;
 border:6px solid white;
@@ -142,9 +139,7 @@ text-shadow:0 0 10px white;
 
 <div class="contenedor">
 
-<div class="cuadrito">
-<img src="img/megamanx.gif">
-</div>
+<div class="cuadrito"></div>
 
 </div>
 
