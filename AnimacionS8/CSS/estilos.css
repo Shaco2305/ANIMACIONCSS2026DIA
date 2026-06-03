@@ -137,7 +137,7 @@ box-shadow:0 0 20px black;
 #imagen{
 width:220px;
 height:220px;
-background:url(/img/imagen18.jpg);
+background:url(../img/imagen18.jpg);
 background-size:cover;
 background-position:center;
 border:6px solid white;
