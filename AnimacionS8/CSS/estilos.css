@@ -1,0 +1,177 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: black;
+}
+
+.contenedor{
+    width: 500px;
+    height: 800px;
+    border: 1px solid white;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.cielo{
+    position: absolute;
+    left: -200px;
+    top: -150px;
+    filter: blur(5px);
+    animation: cielo 30s 1 forwards;
+}
+@keyframes cielo{
+    from{
+        scale: 100%;
+        filter: blur(5px);
+    }
+    to{
+        scale: 150%;
+        filter: blur(0px);
+    }
+}
+.montaña{
+    position: absolute;
+    left: -600px;
+    animation: montaña 20s 1 forwards;
+}
+@keyframes montaña{
+    from{
+        top: 0px;
+        scale: 90%;
+        filter: blur(5px);
+    }
+    to{
+        top: -10px;
+        scale: 110%;
+        filter: blur(0px);
+    }
+}
+.persona{
+    position: absolute;
+    width: 500px;
+    left: -100px;
+    top: 500px;
+    animation: persona 10s 1 forwards;
+}
+@keyframes persona{
+    from{
+        scale: 100%;
+    }
+    to{
+        scale: 80%;
+    }
+}
+.neblina{
+    position: absolute;
+    width: 1000px;
+    left: -150px;
+    top: 410px;
+    animation: neblina 10s 1 forwards;
+}
+@keyframes nebllina {
+    from{
+        left: 0px;
+        top: 150px;
+    }
+    to{
+        left:-400px;
+        top: 150px;
+    }
+
+}
+
+.title{
+    position: absolute;
+    fill: transparent;
+    stroke: rgb(6, 55, 15);
+    stroke-width: 35;
+    stroke-dasharray: 20000;
+    stroke-dashoffset: 20000;
+    animation: title_1 3s ease-in-out 1 forwards;
+    transform: translateX(-50%);
+}
+@keyframes title_1{ 
+    0%{
+        stroke-dashoffset: 20000;
+        transform: translateX(-50%) scale(0.5);
+    }
+    88%{
+        fill: transparent;
+        
+    }
+    100%{
+        fill: rgb(219, 244, 162);
+        stroke-dashoffset: 0;
+        transform: translateX(-50%) scale(1);
+    }
+}
+.title{
+    position: absolute;
+    width: 400px;
+    left: 115px;
+    top: -100px;
+    z-index: 10;
+}
+
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:25px;
+}
+
+#lado{
+width:280px;
+height:600px;
+background:rgba(25,25,25,.95);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:40px;
+box-shadow:0 0 20px black;
+}
+
+#imagen{
+width:220px;
+height:220px;
+background:url(/img/imagen18.jpg);
+background-size:cover;
+background-position:center;
+border:6px solid white;
+box-shadow:0 0 15px rgba(255,255,255,.5);
+animation:flotar 2s infinite alternate;
+}
+
+@keyframes flotar{
+from{
+transform:translateY(0px);
+}
+to{
+transform:translateY(-12px);
+}
+}
+
+.panel{
+padding:18px 30px;
+background:linear-gradient(135deg,#6a5cff,#8f7dff);
+display:flex;
+justify-content:center;
+align-items:center;
+box-shadow:0 0 15px rgba(106,92,255,.7);
+transition:.4s;
+}
+
+.panel:hover{
+transform:scale(1.05);
+}
+
+.panel a{
+text-decoration:none;
+color:white;
+font-size:22px;
+font-weight:bold;
+text-shadow:0 0 10px white;
+}
